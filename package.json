@@ -1,0 +1,52 @@
+{
+  "name": "roadjs",
+  "version": "0.0.0",
+  "description": "roadjs",
+  "scripts": {
+    "clean": "rimraf dist",
+    "start": "webpack-dev-server",
+    "watch": "webpack --watch",
+    "format": "prettier --write \"{__tests__,src}/**/*.{js,ts,scss,html}\"",
+    "prebuild": "npm run format",
+    "build": "npm run clean && webpack --config ./webpack.config.js",
+    "test": "karma start --single-run --browsers ChromeHeadless",
+    "test-watch": "karma start --browsers ChromeHeadless"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^2.8.11",
+    "copy-webpack-plugin": "^4.5.4",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jasmine": "^3.3.0",
+    "karma": "^3.1.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^3.0.5",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.9.4",
+    "prettier": "^1.15.2",
+    "sass-loader": "^7.1.0",
+    "ts-loader": "^5.2.2",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-loader": "^3.5.4",
+    "typescript": "^3.1.3",
+    "webpack": "^4.25.0",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.119",
+    "lodash": "^4.17.11"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  }
+}
